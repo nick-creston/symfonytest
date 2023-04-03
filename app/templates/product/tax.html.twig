@@ -1,0 +1,8 @@
+{% extends "base.html.twig" %}
+{% block title %}Calculated tax{% endblock %}
+{% block body %}
+<h2>Calculated Tax</h2>
+Your <b>tax</b> is {{ tax|default('') }} EUR
+
+<button id="go-back">Go back!</button>
+{% endblock %}

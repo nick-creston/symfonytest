@@ -1,0 +1,29 @@
+{% extends "base.html.twig" %}
+{% block title %}Select products!{% endblock %}
+{% block body %}
+<h2>select products</h2>
+
+
+{{ form_start(form) }}
+
+<div class="form-row">
+  {{ form_label(form.product) }}
+  {{form_widget(form.product)}}
+  <div class="form-error">
+        {{ form_errors(form.product) }}
+    </div>
+</div>
+
+<div class="form-row">
+  {{ form_label(form.code) }}
+  {{form_widget(form.code)}}
+  <div class="form-error">
+    {{ form_errors(form.code) }}
+  </div>
+</div>
+
+<div class="save">
+  {{form_widget(form.save)}}
+</div>
+{{ form_end(form) }}
+{% endblock %}
